@@ -1,0 +1,47 @@
+-- BOOKCAT_ID  	NAME 
+insert into BOOK_CATEGORY  values (1,'Cat1');
+insert into BOOK_CATEGORY  values (2,'Cat2');
+insert into BOOK_CATEGORY  values (3,'Cat3');
+insert into BOOK_CATEGORY  values (4,'Cat4');
+insert into BOOK_CATEGORY  values (5,'Cat5');
+insert into BOOK_CATEGORY  values (6,'Cat6');
+insert into BOOK_CATEGORY  values (7,'Cat7');
+
+-- insert into Book  values (1,'harrypotter');
+-- insert into Book  values (2,'alchemist');
+-- insert into Book  values (3,'gonegal');
+-- insert into Book  values (4,'2states');
+-- insert into Book  values (5,'The Monk');
+-- insert into Book  values (6,'Twilight');
+-- insert into Book  values (7,'revolution2020');
+
+-- bookreqid; userid; bookid; status;
+
+-- insert into BOOKREQUEST values (1,1,1,'I');
+-- insert into BOOKREQUEST values (2,2,1,'I');
+-- insert into BOOKREQUEST values (3,1,2,'I');
+-- insert into BOOKREQUEST values (4,2,2.'I');
+-- insert into BOOKREQUEST values (5,1,3,'I');
+-- insert into BOOKREQUEST values (6,4,4,'I');
+-- insert into BOOKREQUEST values (7,5,6,'I');
+-- insert into BOOKREQUEST values (8,7,7,'I');
+
+-- BOOKREVID  BOOKID   USERID 	REVIEW  	 
+
+insert into BOOKREVIEW values (1,1,1,'Good');
+insert into BookReview values (2,1,2,'Nice');
+insert into BookReview values (3,2,1,'Good');
+insert into BookReview values (4,2,2,'Good');
+insert into BookReview values (5,3,1,'Good');
+insert into BookReview values (6,4,4,'Good');
+insert into BookReview values (7,6,5,'Good');
+insert into BookReview values (8,7,7,'Good');
+
+-- LIKEID   BOOKREWID  USERID  STATUS COMMENTS  
+
+insert into LikeReview values (1,1,2,'L','OK');
+insert into LikeReview values (2,1,3,'L','OK');
+insert into LikeReview values (3,2,2,'L','OK');
+insert into LikeReview values (4,3,5,'L','OK');
+insert into LikeReview values (5,2,6,'L','OK');
+insert into LikeReview values (6,4,7,'L','OK');
