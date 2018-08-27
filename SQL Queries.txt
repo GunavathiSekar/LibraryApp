@@ -1,0 +1,26 @@
+BOOKREQ COUNT
+SELECT count(DISTINCT Book_Id) as "BookReq Count" FROM `book_req` where User_Id=1
+
+BOOKCAT COUNT
+SELECT count(DISTINCT b.book_cat) as "BookCat Count" FROM book_req r,book b where r.book_id=b.book_id and user_id=1
+
+
+BookReview Point
+SELECT count(DISTINCT Book_id)*5 as "Review Points" FROM `book_rew` where User_id=1
+
+SELECT count(DISTINCT r.Book_Id) as "BookReq Count",count(DISTINCT b.book_cat) as "BookCat Count",count(DISTINCT rw.Book_id)*5 as "BookReview Points" FROM book_req r,book b,book_rew rw where b.book_id=r.book_id and b.book_id=rw.book_id and r.User_Id=1
+
+
+Same Book-cat 5 books 3 points
+SELECT b.book_cat,count(DISTINCT r.Book_Id) from book_req r,book b where b.book_id=r.book_id and User_Id=1 group by b.book_cat
+
+
+Like
+SELECT count(*) FROM like_review l,book_rew rw where l.rev_id=rw.rev_id and rw.user_id=1 and liike='L'
+
+
+Popular Book
+SELECT Book_id,count(DISTINCT User_Id) as PopularBook FROM book_req group by Book_Id order by count(DISTINCT User_Id) desc limit 1
+
+
+
