@@ -21,6 +21,7 @@ SELECT count(*) FROM like_review l,book_rew rw where l.rev_id=rw.rev_id and rw.u
 
 Popular Book
 SELECT Book_id,count(DISTINCT User_Id) as PopularBook FROM book_req group by Book_Id order by count(DISTINCT User_Id) desc limit 1
-
-
+book category name ==three tables joined
+ // @Query(value="select distinct(b.BOOKCAT_ID ),c.NAME from BOOK_REQUEST br join BOOK b on br.BOOKID=b.BOOK_ID join Book_Category c on b.bookcat_id=c.bookcat_id where br.USERID=:user_id",nativeQuery=true)
+    // Iterable<BookRequest> findbyuserid(@Param("user_id") Long user_id);
 
