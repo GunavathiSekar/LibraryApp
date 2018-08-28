@@ -25,3 +25,5 @@ book category name ==three tables joined
  // @Query(value="select distinct(b.BOOKCAT_ID ),c.NAME from BOOK_REQUEST br join BOOK b on br.BOOKID=b.BOOK_ID join Book_Category c on b.bookcat_id=c.bookcat_id where br.USERID=:user_id",nativeQuery=true)
     // Iterable<BookRequest> findbyuserid(@Param("user_id") Long user_id);
 
+popular reader
+SELECT user_id,count(DISTINCT book_Id)as "no of times book taken"  FROM book_req group by user_id order by count(DISTINCT book_Id) desc
