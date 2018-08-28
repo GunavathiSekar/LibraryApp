@@ -24,9 +24,9 @@ public class LikeReview {
     @Column
     private Long userid;
     @Column
-    private Character like;
+    private Character likestatus;
     @Column
-    private String Comments;
+    private String comments;
 
     public void setLikeid(Long likeid) {
         this.likeid = likeid;
@@ -48,12 +48,12 @@ public class LikeReview {
         return revid;
     }
 
-    public void setLike(Character like) {
-        this.like = like;
+    public Character getLikestatus() {
+        return likestatus;
     }
-
-    public Character getLike() {
-        return like;
+    
+    public void setLikestatus(Character likestatus) {
+        this.likestatus = likestatus;
     }
 
     public void setRevid(Long revid) {
@@ -61,15 +61,15 @@ public class LikeReview {
     }
 
     public String getComments() {
-        return Comments;
+        return comments;
     }
 
     public void setComments(String comments) {
-        this.Comments = comments;
+        this.comments = comments;
     }
 
     @Override
     public String toString() {
-        return likeid + " " + revid + " " + userid + " " + like;
+        return likeid + " " + revid + " "+comments+"  "+ userid + " " ;
     }
 }

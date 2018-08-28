@@ -23,7 +23,7 @@ public class BookRequest {
     @Column
     private Long bookid;
     @Column
-    private Character status;
+    private String status;
 
     public Long getBookreqid() {
         return bookreqid;
@@ -49,11 +49,11 @@ public class BookRequest {
         this.bookid = bookid;
     }
 
-    public Character getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(Character status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
